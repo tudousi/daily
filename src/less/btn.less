@@ -1,0 +1,48 @@
+
+.btn {
+    display: inline-block;
+    font-weight: @btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    .button-size(@padding-base-vertical;@padding-base-horizantala;@font-size-base;@line-height-base;@btn-border-radius-base);
+    .user-select(none);
+    // 激活焦点
+    &,
+    &:active,
+    &.active {
+        &:focus,
+        &.focus {
+            .tab-focus();    // 设置虚线边框
+        }
+    }
+    // 按钮焦点
+    &:hover,
+    &:focus,
+    &.focus {
+        color: @btn-default-color;
+        text-decoration: none;
+    }
+    // 按下
+    &:active,
+    &.active {
+        color: red;
+    }
+    // 禁用
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: @cursor-disabled;
+        .opacity(.65);
+        .box-shadow(none);
+    }
+    a& {
+        &.disabled,
+        fieldset[disabled] & {
+            pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+        }
+    }
+}

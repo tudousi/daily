@@ -1,0 +1,13 @@
+{
+  "name": "daily",
+  "description": "the daily package.",
+  "version": "3.3.6",
+  "keywords": [
+    "daily"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.9.1",
+	"gulp-less": "3.0.5"
+  }
+}
