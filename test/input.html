@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>button</title>
+    <link rel="stylesheet" href="../dist/css/app.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+        .w180 {
+            width: 180px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w180">
+        <p>邮件地址</p>
+        <input type="text" placeholder="请输入邮件">
+        <input type="text" disabled placeholder="请输入邮件">
+        <input type="text" readonly placeholder="请输入邮件">
+    </div>
+    <div class="w180">
+        <p>附加信息</p>
+        <textarea name="name" rows="8" cols="40" placeholder="abc"></textarea>
+        <textarea name="name" rows="8" cols="40" placeholder="" class="disabled" disabled></textarea>
+    </div>
+</body>
+</html>

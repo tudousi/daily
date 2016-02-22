@@ -1,0 +1,27 @@
+input,
+textarea {
+    display: block;
+    width: 100%;
+    font-size: @input-font-size;
+    line-height: @input-height-base;
+    padding: @input-padding-vertical @input-padding-horizontal;
+    color: @input-color;
+    background-color: @input-bg;
+    background-image: none;
+    border: 1px solid rgba(185,193,199,0.5);
+    .transition(~"border-color 0.2s");
+    border-radius: @input-border-radius;
+
+    &:focus {
+        outline: 0;
+        border-color: @input-borderColor-focus;
+    }
+    .placeholder();
+
+    &[disabled],
+    &.disabled,
+    fieldset[disabled] & {
+        background-color: @input-bg-disabled;
+        cursor: @cursor-disabled;
+    }
+}
