@@ -1,5 +1,5 @@
-var gulpSequence = require('gulp-sequence');
 var gulp = require('gulp');
+var gulpSequence = require('gulp-sequence').use(gulp);
 var less = require('gulp-less');
 var concat = require('gulp-concat');
 var rename = require("gulp-rename");
@@ -36,7 +36,7 @@ gulp.task('product', function() {
     return stream;
 });
 
-gulp.task('buildApp', gulpSequence('base', 'concat'))
+gulp.task('buildApp', gulpSequence('base', 'concat'));
 
 gulp.task('devApp', function() {
     var watcher = gulp.watch('src/**/*.less', ['buildApp']);
