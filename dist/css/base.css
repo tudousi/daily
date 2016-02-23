@@ -17,6 +17,10 @@ html {
  */
 body {
   margin: 0;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "微软雅黑", Arial, simsun, sans-serif;
+}
+body.gray {
+  background-color: #f7f8fa;
 }
 /* HTML5 display definitions
    ========================================================================== */
@@ -632,4 +636,130 @@ fieldset[disabled] input,
 fieldset[disabled] textarea {
   background-color: #ebebe4;
   cursor: not-allowed;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.header {
+  height: 50px;
+  background: #222;
+  color: #b9c1c7;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+.header a {
+  color: #b9c1c7;
+  text-decoration: none;
+}
+.header ul {
+  margin: 0;
+  list-style-type: none;
+}
+.header ul li {
+  float: left;
+}
+.header ul li a {
+  display: block;
+  padding: 0 15px;
+  line-height: 50px;
+}
+.header ul li a strong {
+  margin-left: 8px;
+  font-weight: inherit;
+}
+.header ul li a:hover {
+  color: #fff;
+  background-color: #333;
+}
+.header .logo {
+  float: left;
+  line-height: 50px;
+}
+.header .nav {
+  float: left;
+}
+.header .search {
+  float: left;
+  margin-left: 10px;
+}
+.header .search form {
+  width: 190px;
+  position: relative;
+  margin-top: 12px;
+}
+.header .search form input {
+  box-sizing: border-box;
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 3px 10px;
+}
+.header .search form input::-moz-placeholder {
+  color: #71767a;
+  opacity: 1;
+}
+.header .search form input:-ms-input-placeholder {
+  color: #71767a;
+}
+.header .search form input::-webkit-input-placeholder {
+  color: #71767a;
+}
+.header .search label {
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  font-size: 12px;
+}
+.header .search label i {
+  color: #696d71;
+}
+.header .profile {
+  float: right;
+}
+.main-left {
+  width: 720px;
+  margin-right: 10px;
+  float: left;
+  padding-top: 10px;
+}
+.main-right {
+  width: 270px;
+  float: left;
+}
+.box {
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid #eeeff2;
+  border-radius: 3px;
+  padding: 10px 0 0 10px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.box.shadow:hover {
+  -webkit-box-shadow: 0px 1px 15px rgba(0,0,0,0.08);
+  box-shadow: 0px 1px 15px rgba(0,0,0,0.08);
+}
+.author p {
+  margin: 0;
+}
+.author .author-cover {
+  float: left;
+  margin-right: 10px;
+}
+.author .author-info {
+  overflow: hidden;
+}
+.author .author-info .author-name {
+  color: #525558;
+  font-size: 14px;
+  text-decoration: none;
+}
+.author .author-info .author-name:hover {
+  color: #00aaff;
+}
+.author .author-info .publish-tiem {
+  color: #d6d6d6;
+  font-size: 13px;
 }
