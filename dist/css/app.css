@@ -794,7 +794,8 @@ body {
   margin-right: 10px;
 }
 .details .edit-comment .comment-text input {
-  padding: 4px 0;
+  font-size: 12px;
+  padding: 6px 0;
   text-indent: 1em;
 }
 .details .edit-comment .comment-operator {
