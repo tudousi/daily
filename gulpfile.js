@@ -17,11 +17,17 @@ gulp.task('common', function() {
     return stream;
 });
 // 提供各个页面的样式
-gulp.task('index', function() {
+gulp.task('index', function() {                     // 编译首页
     var stream = gulp.src('./src/less/index.less')
         .pipe(less({
             //paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
+        .pipe(gulp.dest('./dist/css'));
+    return stream;
+});
+gulp.task('user', function() {                      // 编译用户界面
+    var stream = gulp.src('./src/less/user.less')
+        .pipe(less({}))
         .pipe(gulp.dest('./dist/css'));
     return stream;
 });

@@ -82,6 +82,7 @@ template {
  */
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 /**
  * Improve readability of focused elements when they are also in an
@@ -369,11 +370,6 @@ optgroup {
   font-weight: bold;
 }
 .tab-focus {
-  /*
-    outline: thin dotted;
-    oulint: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-    */
   outline: none;
 }
 .btn {
@@ -401,11 +397,6 @@ optgroup {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  /*
-    outline: thin dotted;
-    oulint: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-    */
   outline: none;
 }
 .btn:hover,
@@ -655,6 +646,9 @@ fieldset[disabled] textarea {
 .mr4 {
   margin-right: 4px;
 }
+.mr10 {
+  margin-right: 10px;
+}
 .posr {
   position: relative;
 }
@@ -663,6 +657,12 @@ fieldset[disabled] textarea {
 }
 .vac {
   vertical-align: middle;
+}
+.widget-left {
+  float: left;
+}
+.widget-right {
+  overflow: hidden;
 }
 .container {
   width: 1000px;

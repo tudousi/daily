@@ -2,3 +2,69 @@
 @import "variables.less";
 @import "mixins.less";
 @import "vender-prefix";
+.user-nav {
+    width: 270px;
+    float: left;
+    margin-right: 10px;
+    padding-top: 10px;
+    .box {
+        padding: 0;
+    }
+}
+.user-content {
+    width: 720px;
+    float: left;
+    padding-top: 10px;
+    .box {
+        padding: 0;
+    }
+}
+// 编辑用户基本信息展示
+.box.editshow-user-info {padding: 10px;}
+.editshow-user-info {
+    .editshow-user-info__cover {
+        img {
+            border-radius: @img-border-radius;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .editshow-user-info__username {
+        position: relative;
+        line-height: 1;
+        top: -2px;
+        a {
+            font-size: 12px;
+            color: @a-color;
+            &:hover {
+                color: @a-hover;
+            }
+        }
+    }
+    .editshow-user-info__reg-time {
+        font-size: 12px;
+        color: @color-light-gray;
+    }
+}
+.edit-nav {
+    margin-top: 10px;
+    a {
+        display: block;
+        color: lighten(@a-color, 20%);
+        font-size: 14px;
+        text-indent: 1em;
+        position: relative;
+        padding: 6px 0;
+        border-bottom: 1px solid @box-border;
+        i {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        &:hover,
+        &.hover {
+            color: @a-color;
+            background-color: darken(#fff, 5%);
+        }
+    }
+}
