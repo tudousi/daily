@@ -184,6 +184,12 @@
 .commenter-box .commenter-content .commenter-meta a {
   color: #00aaff;
 }
+.commenter-box .commenter-content .commenter-meta a.reply {
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 12px;
+  color: #0088cc;
+}
 .commenter-box .commenter-content .commenter-author {
   position: relative;
   top: -2px;
@@ -198,10 +204,4 @@
   margin: 0;
   line-height: 1.5;
   font-size: 12px;
-}
-.commenter-box .commenter-content .reply {
-  text-decoration: none;
-  margin-left: 10px;
-  font-size: 12px;
-  color: #0088cc;
 }

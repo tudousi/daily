@@ -59,8 +59,7 @@
                 </div>
             </div>
             <div class="box edit-nav">
-                <a href="#" class="hover">账号<i class="icon icon-chevron-right"></i></a>
-                <a href="#">密码<i class="icon icon-chevron-right"></i></a>
+                <a href="#" class="hover">账号信息<i class="icon icon-chevron-right"></i></a>
                 <a href="#">积分<i class="icon icon-chevron-right"></i></a>
                 <a href="#">提交<i class="icon icon-chevron-right"></i></a>
                 <a href="#">评论<i class="icon icon-chevron-right"></i></a>
@@ -68,7 +67,39 @@
         </div>
         <div class="user-content">
             <div class="box edit-user">
-                修改用户信息
+                <div class="edit-user__header">
+                    <h3>修改账号信息</h3>
+                    <p>编辑基本的账号信息和密码</p>
+                </div>
+                <div class="edit-user__inner">
+                    <form action="" class="form-horizontal">
+                        <div class="control-group">
+                            <label for="" class="control-label">昵称</label>
+                            <div class="controls">
+                                <input type="text" name="nike" value="tudousi">
+                                <p class="notification">改昵称是在网页中对别人显示</p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="" class="control-label">邮箱</label>
+                            <div class="controls">
+                                <input type="text" name="email" readonly disabled value="41871879@qq.com">
+                                <p class="notification">邮箱无法修改!</p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="" class="control-label">修改密码</label>
+                            <div class="controls">
+                                <input type="text" class="inline mr10" name="checkpassword" style="width:130px;" placeholder="请先输入旧密码">
+                                <button type="button" class="btn btn-default edit-user__inner--checkpassword">验证密码</button>
+                                <p class="notification">修改密码需要输入旧密码以确保安全</p>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">保存修改</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
