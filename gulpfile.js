@@ -7,14 +7,26 @@ var cssmin = require("gulp-cssmin");
 //var uglify = require('gulp-uglify');
 var path = require('path');
 
-gulp.task('base', function() {
-    var stream = gulp.src('./src/less/base.less')
+// 提供各个页面的样式
+gulp.task('common', function() {
+    var stream = gulp.src('./src/less/common.less')
         .pipe(less({
             //paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
         .pipe(gulp.dest('./dist/css'));
     return stream;
 });
+// 提供各个页面的样式
+gulp.task('index', function() {
+    var stream = gulp.src('./src/less/index.less')
+        .pipe(less({
+            //paths: [ path.join(__dirname, 'less', 'includes') ]
+        }))
+        .pipe(gulp.dest('./dist/css'));
+    return stream;
+});
+
+// 字体库
 gulp.task('fa', function() {
     return gulp.src(['./src/less/fontawesome/font-awesome.less'])
         .pipe(less({
@@ -22,12 +34,10 @@ gulp.task('fa', function() {
         }))
         .pipe(gulp.dest('./dist/css'))
 });
-gulp.task('concat', function() {
-    var stream = gulp.src(['./dist/css/base.css', './dist/css/font-awesome.css'])
-        .pipe(concat('app.css'))
-        .pipe(gulp.dest('./dist/css'));
-    return stream;
-});
+
+
+
+
 gulp.task('product', function() {
     var stream = gulp.src('./dist/css/app.css')
         .pipe(cssmin())
@@ -36,7 +46,7 @@ gulp.task('product', function() {
     return stream;
 });
 
-gulp.task('buildApp', gulpSequence('base', 'concat'));
+
 
 gulp.task('devApp', function() {
     var watcher = gulp.watch('src/**/*.less', ['buildApp']);
@@ -50,3 +60,16 @@ gulp.task('default', function() {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
 })
+
+
+/*
+// 放弃这种办法，把字体库移出来
+gulp.task('concat-index', function() {
+    var stream = gulp.src(['./dist/css/index.css', './dist/css/font-awesome.css'])
+        .pipe(concat('index.css'))
+        .pipe(gulp.dest('./dist/css'));
+    return stream;
+});
+*/
+// 对各个页面进行编译
+//gulp.task('build-index', gulpSequence('index', 'concat-index')); // 对index进行编译
