@@ -1,0 +1,72 @@
+
+
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+}
+.button-variant(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+    .box-shadow(0px 1px 0px rgba(255,255,255,0.15) inset);
+    // 按钮焦点
+    &:focus,
+    &.focus {
+        color: @color;
+        background-color: @background;
+        //background-color: darken(@background, 4%);
+        //border-color: darken(@border, 25%);
+    }
+    // 鼠标在按钮上
+    &:hover {
+        color: @color;
+        background-color: darken(@background, 4%);
+        //border-color: darken(@border, 12%);
+    }
+    // 鼠标按钮
+    &:active,
+    &.active {
+        color: @color;
+        background-color: @background;
+
+        //border-color: darken(@border, 12%);
+        // 按下按钮切鼠标在按钮上
+        &:hover,
+        &:focus,
+        &.focus {
+            //color: @color;
+            //border-color: darken(@border, 12%);
+            background-color: @background;
+            .box-shadow(0px 1px 0px rgba(0,0,0,0.15) inset)
+        }
+    }
+    // 禁用
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            background-color: @background;
+            border-color: @border;
+            .box-shadow(none);
+        }
+
+    }
+}
+// 设置是否能选择文本
+.tab-focus {
+    outline: none;
+}
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}

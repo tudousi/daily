@@ -1,0 +1,135 @@
+.tab-focus {
+  outline: none;
+}
+.user-nav {
+  width: 270px;
+  float: left;
+  margin-right: 10px;
+  padding-top: 10px;
+}
+.user-nav .box {
+  padding: 0;
+}
+.user-content {
+  width: 720px;
+  float: left;
+  padding-top: 10px;
+}
+.user-content .box {
+  padding: 0;
+}
+.box.editshow-user-info {
+  padding: 10px;
+}
+.editshow-user-info .editshow-user-info__cover img {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+}
+.editshow-user-info .editshow-user-info__username {
+  position: relative;
+  line-height: 1;
+  top: -2px;
+}
+.editshow-user-info .editshow-user-info__username a {
+  font-size: 12px;
+  color: #525558;
+}
+.editshow-user-info .editshow-user-info__username a:hover {
+  color: #00aaff;
+}
+.editshow-user-info .editshow-user-info__reg-time {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.edit-nav {
+  margin-top: 10px;
+}
+.edit-nav a {
+  display: block;
+  color: #84888c;
+  font-size: 14px;
+  text-indent: 1em;
+  position: relative;
+  padding: 6px 0;
+  border-bottom: 1px solid #eeeff2;
+}
+.edit-nav a i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.edit-nav a:hover,
+.edit-nav a.hover {
+  color: #525558;
+  background-color: #f2f2f2;
+}
+.edit-user .edit-user__header {
+  padding: 10px;
+  border-bottom: 1px solid #eeeff2;
+}
+.edit-user .edit-user__header h3 {
+  font-size: 16px;
+  margin: 0;
+  line-height: 2;
+}
+.edit-user .edit-user__header p {
+  color: #8c8c8c;
+  margin: 0;
+  font-size: 14px;
+}
+.edit-user .edit-user__inner {
+  padding-top: 20px;
+}
+.edit-user .edit-user__inner p {
+  margin: 0;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.edit-user .edit-user__inner input[type="text"],
+.edit-user .edit-user__inner textarea,
+.edit-user .edit-user__inner select {
+  padding: 5px 10px;
+  font-size: 12px;
+  width: 210px;
+}
+.edit-user .edit-user__inner .inline {
+  display: inline-block;
+}
+.edit-user .edit-user__inner .edit-user__inner--checkpassword {
+  line-height: 28px;
+  font-size: 12px;
+}
+.control-group {
+  margin-bottom: 15px;
+}
+.control-group:before,
+.control-group:after {
+  content: " ";
+  display: table;
+}
+.control-group:after {
+  clear: both;
+}
+.form-horizontal .control-label {
+  float: left;
+  padding-top: 5px;
+  width: 120px;
+  text-align: right;
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+  border-bottom: 0;
+}
+.form-horizontal .controls {
+  margin-left: 140px;
+}
+.form-horizontal input,
+.form-horizontal textarea,
+.form-horizontal select {
+  margin-bottom: 5px;
+}
+.form-actions {
+  padding-left: 140px;
+  margin: 20px 0 8px;
+}

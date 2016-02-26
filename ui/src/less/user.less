@@ -1,0 +1,134 @@
+// 用户样式
+@import "variables.less";
+@import "mixins.less";
+@import "vender-prefix";
+.user-nav {
+    width: 270px;
+    float: left;
+    margin-right: 10px;
+    padding-top: 10px;
+    .box {
+        padding: 0;
+    }
+}
+.user-content {
+    width: 720px;
+    float: left;
+    padding-top: 10px;
+    .box {
+        padding: 0;
+    }
+}
+// 编辑用户基本信息展示
+.box.editshow-user-info {padding: 10px;}
+.editshow-user-info {
+    .editshow-user-info__cover {
+        img {
+            border-radius: @img-border-radius;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .editshow-user-info__username {
+        position: relative;
+        line-height: 1;
+        top: -2px;
+        a {
+            font-size: 12px;
+            color: @a-color;
+            &:hover {
+                color: @a-hover;
+            }
+        }
+    }
+    .editshow-user-info__reg-time {
+        font-size: 12px;
+        color: @color-light-gray;
+    }
+}
+.edit-nav {
+    margin-top: 10px;
+    a {
+        display: block;
+        color: lighten(@a-color, 20%);
+        font-size: 14px;
+        text-indent: 1em;
+        position: relative;
+        padding: 6px 0;
+        border-bottom: 1px solid @box-border;
+        i {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        &:hover,
+        &.hover {
+            color: @a-color;
+            background-color: darken(#fff, 5%);
+        }
+    }
+}
+.edit-user {
+    .edit-user__header {
+        padding: 10px;
+        border-bottom: 1px solid @box-border;
+        h3 {
+            font-size: 16px;
+            margin: 0;
+            line-height: 2;
+        }
+        p {
+            color: @color-light-gray;
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+    .edit-user__inner {
+        padding-top: 20px;
+        p {
+            margin: 0;
+            font-size: 12px;
+            color: @color-light-gray;
+        }
+        input[type="text"],
+        textarea,
+        select {
+            padding: 5px 10px;
+            font-size: 12px;
+            width: 210px;
+        }
+        .inline {
+            display: inline-block;
+        }
+        .edit-user__inner--checkpassword {
+            line-height: 28px;
+            font-size: 12px;
+        }
+    }
+}
+.control-group {
+    margin-bottom: 15px;
+    .clearfix();
+}
+.form-horizontal {
+    .control-label {
+        float: left;
+        padding-top: 5px;
+        width: 120px;
+        text-align: right;
+        margin: 0;
+        font-size: 13px;
+        line-height: 20px;
+        border-bottom: 0;
+    }
+    .controls {
+        margin-left: 140px;
+    }
+    input,textarea,select {
+        margin-bottom: 5px;
+    }
+}
+.form-actions {
+    padding-left: 140px;
+    margin: 20px 0 8px;
+}
