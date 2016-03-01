@@ -95,39 +95,6 @@
         ]
     },
     {
-        "name": "bower-asset/jquery",
-        "version": "2.2.0",
-        "version_normalized": "2.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/jquery/jquery-dist.git",
-            "reference": "6fc01e29bdad0964f62ef56d01297039cdcadbe5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/6fc01e29bdad0964f62ef56d01297039cdcadbe5",
-            "reference": "6fc01e29bdad0964f62ef56d01297039cdcadbe5",
-            "shasum": ""
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": "dist/jquery.js",
-            "bower-asset-ignore": [
-                "package.json"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "MIT"
-        ],
-        "keywords": [
-            "browser",
-            "javascript",
-            "jquery",
-            "library"
-        ]
-    },
-    {
         "name": "bower-asset/yii2-pjax",
         "version": "v2.0.5",
         "version_normalized": "2.0.5.0",
@@ -925,6 +892,90 @@
             "Fixture",
             "faker",
             "yii2"
+        ]
+    },
+    {
+        "name": "bower-asset/jquery",
+        "version": "2.2.1",
+        "version_normalized": "2.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jquery/jquery-dist.git",
+            "reference": "788eaba2f83e7b7445c7a83a50c81c0704423874"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/788eaba2f83e7b7445c7a83a50c81c0704423874",
+            "reference": "788eaba2f83e7b7445c7a83a50c81c0704423874",
+            "shasum": ""
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": "dist/jquery.js",
+            "bower-asset-ignore": [
+                "package.json"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ],
+        "keywords": [
+            "browser",
+            "javascript",
+            "jquery",
+            "library"
+        ]
+    },
+    {
+        "name": "rmccue/requests",
+        "version": "v1.6.1",
+        "version_normalized": "1.6.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/rmccue/Requests.git",
+            "reference": "6aac485666c2955077d77b796bbdd25f0013a4ea"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/rmccue/Requests/zipball/6aac485666c2955077d77b796bbdd25f0013a4ea",
+            "reference": "6aac485666c2955077d77b796bbdd25f0013a4ea",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2"
+        },
+        "require-dev": {
+            "satooshi/php-coveralls": "dev-master"
+        },
+        "time": "2014-05-18 04:59:02",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Requests": "library/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "ISC"
+        ],
+        "authors": [
+            {
+                "name": "Ryan McCue",
+                "homepage": "http://ryanmccue.info"
+            }
+        ],
+        "description": "A HTTP library written in PHP, for human beings.",
+        "homepage": "http://github.com/rmccue/Requests",
+        "keywords": [
+            "curl",
+            "fsockopen",
+            "http",
+            "idna",
+            "ipv6",
+            "iri",
+            "sockets"
         ]
     }
 ]

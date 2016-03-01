@@ -11,15 +11,20 @@ use yii\web\IdentityInterface;
  * User model
  *
  * @property integer $id
- * @property string $username
+ * @property string $nike
+ * @property string $avatar
+ * @property string $email
+ * @property integer $level
+ * @property integer $points
+ * @property string $description
+ * @property integer $gender
+ * @property string $auth_key
  * @property string $password_hash
  * @property string $password_reset_token
- * @property string $email
- * @property string $auth_key
  * @property integer $status
+ * @property string $registered
  * @property integer $created_at
  * @property integer $updated_at
- * @property string $password write-only password
  */
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -52,6 +57,13 @@ class User extends ActiveRecord implements IdentityInterface
         return [
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+
+            [['nike', 'email'], 'required'],
+            [['level', 'points', 'gender', 'status'], 'integer'],
+            [['registered'], 'safe'],
+            [['nike'], 'string', 'max' => 12],
+            [['avatar', 'email'], 'string', 'max' => 128],
+            [['description'], 'string', 'max' => 160]
         ];
     }
 
@@ -77,9 +89,9 @@ class User extends ActiveRecord implements IdentityInterface
      * @param string $username
      * @return static|null
      */
-    public static function findByUsername($username)
+    public static function findByUsername($nike)
     {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['nike' => $nike, 'status' => self::STATUS_ACTIVE]);
     }
 
     /**
